@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form validation</title>
+</head>
+<body>
+    <form id="signUpForm">
+        <div>
+            <p><label for="emailField">Your email*</label></p>
+            <input type="email" id="emailField" required>
+            <p><span id='email-informations' hidden>Email is not correct</span></p>
+        </div>
+        <div>
+            <p>
+                <label for="name">What's your name?*</label>
+            </p>
+            <p>
+                <input id="name" name="name" required minlength='2' maxlength='20'>
+            </p>
+            <p>
+                <span id='name-info' hidden>Please enter a name between 2 and 20 characters please</span>
+            </p>
+            <p>
+                <label for="age">What's your age?*</label>
+            </p>
+            <p>
+                <input id="age" name="age" type='number' required min='1' max='150'>
+            </p>
+            <p>
+                <span id='age-info' hidden>Please enter an age between 1 and 150 years old please</span>
+            </p>
+        </div>
+        <div>
+            <button id="okButton" disabled>OK</button>
+        </div>
+      </form>
+      
+    <script src="code.js"></script>
+</body>
+</html>
